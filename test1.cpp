@@ -12,16 +12,16 @@ int main()
 {
   void (*arr[10])(int, int);
   for (int i = 0; i < 10; ++i)
-    arr[i] = &foo; // this line introduces an error in cxx and c too!
+    // arr[i] = &foo; // this line introduces an error in cxx and c too!
 
   // the rest compiles with no warnings!
   void (*arr1[10])();
   for (int i = 0; i < 10; ++i)
-    arr[i] = nullptr;
+    arr[i] = NULL;
 
   void (*arr2[10])(int);
   for (int i = 0; i < 10; ++i)
-    arr[i] = nullptr;
+    arr[i] = NULL;
 
   return 0;
 }
