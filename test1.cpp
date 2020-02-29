@@ -1,3 +1,5 @@
+// msvc++ demands naming parameters, so the next line should
+// be like void foo(int name)
 void foo(int)
 {
   return;
