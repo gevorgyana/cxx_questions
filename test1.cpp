@@ -3,17 +3,21 @@ void foo(int)
   return;
 }
 
+// c = gcc -Wall test1.cpp
+// cxx = g++ -Wall test1.cpp
+
 int main()
 {
-  // g++ -Wall test1.cpp yields this "invalid conversion from
-  // ‘void (*)(int)’ to ‘void (*)(int, int)’";
-  // gcc -Wall test1.cpp yields the same message
   void (*arr[10])(int, int);
   for (int i = 0; i < 10; ++i)
-    arr[i] = &foo;
+    arr[i] = &foo; // this line introduces an error in cxx and c too!
 
-  // this compiles anyway though in both c and c++
-  void (*arr[10])();
+  // the rest compiles with no warnings!
+  void (*arr1[10])();
+  for (int i = 0; i < 10; ++i)
+    arr[i] = nullptr;
+
+  void (*arr2[10])(int);
   for (int i = 0; i < 10; ++i)
     arr[i] = nullptr;
 
