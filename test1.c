@@ -1,3 +1,10 @@
+/**
+
+   https://www.linuxtopia.org/online_books/an_introduction_to_gcc/gccintro_54.html
+
+A point that sometimes causes confusion is that gcc will actually compile C++ source code when it detects a C++ file extension, but cannot then link the resulting object files. To avoid this problem, use g++ consistently for C++ programs and gcc for C programs.
+ */
+
 // if i name the file in .c, gcc demands that i name the parameter
 void foo(int name)
 {
