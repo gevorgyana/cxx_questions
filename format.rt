@@ -1,0 +1,8 @@
+file:
+	minimal example to reproduce;
+	version of standard and compiler vendor;
+	short description of what is wanted to be achieved;
+	(optional) when a question is answered, explanation of the problem;
+
+when u need to look for a specific compilation example, use grep to find lines that
+form short description, or compilation details (like '&&' etc.)
